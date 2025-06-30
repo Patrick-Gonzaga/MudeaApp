@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#28233C"
-    tools:context=".activity_login">
+
+    tools:context=".loginActivity">
 
 
     <ImageView
@@ -31,45 +31,75 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NICKNAME"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
-        <com.google.android.material.textfield.TextInputEditText
+            android:text="NICKNAME/EMAIL"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/nicknameInput"
+            android:layout_height="wrap_content"
             android:textColorHint="#B0B0B0"
-            android:hint="Digite seu nickname"
-            android:background="@drawable/edittext_bg"
-            android:padding="12dp"
-            android:layout_marginVertical="8dp"/>
+            app:boxBackgroundMode="outline"
+            app:endIconTint="#FFFCFC"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/white"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="222dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nicknameInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Digite seu nickname ou email"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/secondaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SENHA"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
-        <com.google.android.material.textfield.TextInputEditText
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/nicknamePassword"
+            android:layout_height="wrap_content"
             android:textColorHint="#B0B0B0"
-            android:hint="Digite sua senha"
-            android:background="@drawable/edittext_bg"
-            android:padding="12dp"
-            android:layout_marginVertical="8dp"/>
+            app:boxBackgroundMode="outline"
+            app:endIconMode="password_toggle"
+            app:endIconTint="#FFFCFC"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/white"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="222dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nicknamePassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Digite sua senha"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/secondaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/btnNovaConta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Criar conta"
                 android:layout_weight="1"
-                android:textColor="@color/white"/>
+                android:text="Criar conta" />
 
             <TextView
                 android:id="@+id/btnEsqueceu"
@@ -77,16 +107,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:text="Esqueceu sua senha?"
-                android:textColor="@color/white" />
+                android:text="Esqueceu sua senha?" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
+            style="@style/myButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Entrar (lá ele)"/>
+            android:text="Entrar (lá ele)" />
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

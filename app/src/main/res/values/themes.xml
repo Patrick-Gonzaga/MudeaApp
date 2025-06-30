@@ -1,10 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MUDEA" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.MUDEA" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/roboto_family</item>
         <item name="fontFamily">@font/roboto_family</item>
+        <item name="android:windowBackground">@color/backgroundDefault</item>
+        <item name="android:textColor">@color/white</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+    <style name="myButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/button_style</item>
     </style>
 
     <style name="Theme.MUDEA" parent="Base.Theme.MUDEA" />

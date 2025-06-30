@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mudea.databinding.ActivityLoginBinding
 
-class activity_login : AppCompatActivity() {
+class loginActivity : AppCompatActivity() {
     private val binding:ActivityLoginBinding by lazy{
         ActivityLoginBinding.inflate(layoutInflater)
     }
