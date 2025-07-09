@@ -31,8 +31,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NICKNAME/EMAIL"
-            android:textStyle="bold" />
+            android:text="EMAIL"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -41,17 +42,15 @@
             app:boxBackgroundMode="outline"
             app:endIconTint="#FFFCFC"
             app:hintEnabled="false"
-            app:hintTextColor="@color/white"
-            tools:layout_editor_absoluteX="126dp"
-            tools:layout_editor_absoluteY="222dp">
+            app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nicknameInput"
+                android:id="@+id/inputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginVertical="8dp"
                 android:background="@drawable/edittext_bg"
-                android:hint="Digite seu nickname ou email"
+                android:hint="Digite seu email"
                 android:padding="12dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/secondaryColor" />
@@ -77,7 +76,7 @@
             tools:layout_editor_absoluteY="222dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nicknamePassword"
+                android:id="@+id/inputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginVertical="8dp"
@@ -111,6 +110,7 @@
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/enterButton"
             style="@style/myButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

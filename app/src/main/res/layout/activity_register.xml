@@ -30,6 +30,7 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="224dp"
         android:layout_height="235dp"
         android:src="@drawable/ic_logomudea"
@@ -38,6 +39,116 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="38dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMAIL"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#B0B0B0"
+            app:boxBackgroundMode="outline"
+            app:endIconTint="#FFFCFC"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Digite seu email"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/secondaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SENHA"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#B0B0B0"
+            app:boxBackgroundMode="outline"
+            app:endIconMode="password_toggle"
+            app:endIconTint="#FFFCFC"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/white"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="222dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Digite sua senha"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/secondaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#B0B0B0"
+            app:boxBackgroundMode="outline"
+            app:endIconMode="password_toggle"
+            app:endIconTint="#FFFCFC"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/white"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="222dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPasswordRep"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Repita sua senha"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/secondaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digite uma senha com no mínimo 8 caracteres"
+            android:textSize="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/myButton"
+            android:text="Registrar"
+            />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
