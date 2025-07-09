@@ -74,11 +74,3 @@ class registerActivity : AppCompatActivity() {
         }
     }
 }
-
-/* FirebaseHelper.criarConta(email,senha,
-                        sucesso = {usuario ->
-                            Toast.makeText(this,"Registro concluído com sucesso com o email ${usuario?.email}",Toast.LENGTH_SHORT).show()
-                    },
-                        falha = {erro ->
-                            Toast.makeText(this,"Erro no login: ${erro?.message}", Toast.LENGTH_SHORT).show()
-                        }) */
