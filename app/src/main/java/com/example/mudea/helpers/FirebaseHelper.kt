@@ -10,9 +10,13 @@ object FirebaseHelper {
 
     val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
-    fun getUser(): FirebaseUser? = auth.currentUser
+    fun getUser(): FirebaseUser? {
+        return auth.currentUser
+    }
 
-    fun isLogged(): Boolean = getUser() != null
+    fun isLogged(): Boolean  {
+        return getUser() != null
+    }
 
     fun signOut(){
         auth.signOut()
