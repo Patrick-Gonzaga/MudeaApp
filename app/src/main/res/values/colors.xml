@@ -4,5 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primaryColor">#BB86FC</color>
     <color name="secondaryColor">#664FA3</color>
+    <color name="navItemsColor">#3B2E59</color>
     <color name="backgroundDefault">#28233C</color>
+    <color name="backgroundDefaultFade">#D928233C</color>
 </resources>
