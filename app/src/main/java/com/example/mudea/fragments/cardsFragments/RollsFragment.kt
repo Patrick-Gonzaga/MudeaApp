@@ -1,5 +1,6 @@
 package com.example.mudea.fragments.cardsFragments
 
+import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
@@ -11,6 +12,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import com.example.mudea.R
 import com.example.mudea.databinding.FragmentRollsBinding
+import jp.wasabeef.blurry.Blurry
 
 class RollsFragment : Fragment() {
 
@@ -30,12 +32,21 @@ class RollsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //here
-
+        /*initShadowBlur()*/
 
     }
 
 
-
+    /*fun initShadowBlur(){
+        val viewToBlur = requireView().findViewById<View>(R.id.cardView)
+        viewToBlur.isDrawingCacheEnabled = true
+        val bitmap = Bitmap.createBitmap(viewToBlur.drawingCache)
+        viewToBlur.isDrawingCacheEnabled = false
+        Blurry.with(requireContext())
+            .radius(15)
+            .from(bitmap)
+            .into(requireView().findViewById(R.id.shadowBg))
+    }*/
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
