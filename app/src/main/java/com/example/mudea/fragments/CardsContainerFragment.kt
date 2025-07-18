@@ -29,7 +29,8 @@ class CardsContainerFragment : Fragment() {
         //here
         binding.radioRolls.isChecked = true
         parentFragmentManager.beginTransaction()
-            .add(binding.navHostFragmentCards.id, RollsFragment()).commit()
+            .add(binding.navHostFragmentCards.id, AlbumFragment()).commit()
+            .also { binding.radioAlbum.isChecked = true } //APAGAR
 
         binding.RGRollsAlbum.setOnCheckedChangeListener { group, checkedId ->
             when(checkedId){

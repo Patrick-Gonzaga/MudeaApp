@@ -16,6 +16,11 @@
         <item name="backgroundTint">@null</item>
         <item name="android:background">@drawable/button_style</item>
     </style>
+    <style name="myButtonInverted" parent="Widget.MaterialComponents.Button">
+
+    <item name="backgroundTint">@null</item>
+    <item name="android:background">@drawable/button_style_inverted</item>
+</style>
 
 
 

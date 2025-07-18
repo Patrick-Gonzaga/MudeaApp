@@ -42,7 +42,7 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="120dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -78,94 +78,112 @@
                 android:clipToPadding="false"
                 android:elevation="12dp"
                 app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="50dp">
-
-                <ImageView
-                    android:id="@+id/animeImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/neymar" />
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:layout_gravity="bottom"
-                    android:src="@drawable/bottom_fade" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="300dp"
-                android:elevation="1dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/shadowBgCard"
-                app:layout_constraintEnd_toEndOf="@+id/shadowBgCard"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/shadowBgCard">
+                app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Neymar Jr."
-                        android:textSize="20dp" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/secondaryColor" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Brasileirão Série A"
-                    android:textSize="13dp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <LinearLayout
-                        android:id="@+id/containerGender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="22dp"
-                        android:background="@drawable/kakera_point_card_bg"
+                        android:layout_marginBottom="64dp"
+                        android:elevation="1dp"
                         android:gravity="center"
-                        android:orientation="horizontal"
-
+                        android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
 
-                        <ImageView
-                            android:layout_width="38dp"
-                            android:layout_height="38dp"
-                            android:padding="8dp"
-                            android:src="@drawable/sexos"
-                            app:tint="@color/white" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Neymar Jr."
+                                android:textSize="20dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/secondaryColor" />
+
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="8dp"
-                            android:text="Masc."
-                            android:textSize="18sp" />
+                            android:text="Brasileirão Série A"
+                            android:textSize="13dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/containerGender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="22dp"
+                                android:background="@drawable/kakera_point_card_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                                <ImageView
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:padding="8dp"
+                                    android:src="@drawable/sexos"
+                                    app:tint="@color/white" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:text="Masc."
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/animeImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/neymar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/bottom_fade"
+                        app:layout_constraintBottom_toBottomOf="@+id/animeImage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -197,10 +215,28 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/marryButton"
+            style="@style/myButtonInverted"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginBottom="120dp"
+            android:text="Marry"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Button
+            android:id="@+id/rollButton"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="22dp"
             android:text="Roll"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             style="@style/myButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout"
