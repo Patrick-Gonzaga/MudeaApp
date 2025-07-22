@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.mudea.databinding.ActivityLoginBinding
 import com.example.mudea.databinding.ActivityMainBinding
 import com.example.mudea.fragments.CardsContainerFragment
+import com.example.mudea.fragments.PerfilFragment
 import com.example.mudea.fragments.PowersFragment
 import com.example.mudea.fragments.SettingsFragment
 import com.example.mudea.helpers.FirebaseHelper
@@ -26,8 +27,13 @@ class MainActivity : AppCompatActivity() {
         BottomSheetDialog(
             message = "Login concluído com email: ${FirebaseHelper.getUser()?.email}",
         ).show(supportFragmentManager, "BottomSheetDialog")
+        initFragment()
+
+    }
+
+    fun initFragment(){
         supportFragmentManager.beginTransaction()
-            .add(binding.navHostFragment.id, CardsContainerFragment()).commit()
+            .add(binding.navHostFragment.id, PowersFragment()).commit()
 
 
         binding.bottomNavigation.setOnItemSelectedListener { item ->
@@ -50,9 +56,14 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     true
                 }
+                R.id.navPerfil ->{
+                    supportFragmentManager.beginTransaction()
+                        .replace(binding.navHostFragment.id, PerfilFragment())
+                        .commit()
+                    true
+                }
                 else -> false
             }
         }
-
     }
 }

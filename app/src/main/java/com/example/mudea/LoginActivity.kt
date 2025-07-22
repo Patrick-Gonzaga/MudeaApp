@@ -25,8 +25,20 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.btnEsqueceu.setOnClickListener {
-            val intent = Intent(this, ForgotPasswordActivity::class.java)
-            startActivity(intent)
+            BottomSheetDialog(
+                message = "Eu também não sei sua senha!!",
+                onClick = {
+                    BottomSheetDialog(
+                        message = "Zuera mano, recupera sua senha aí kkk",
+                        onClick = {
+                            val intent = Intent(this, ForgotPasswordActivity::class.java)
+                            startActivity(intent)
+                        }
+                    ).show(supportFragmentManager,"BottomSheetDialog")
+                }
+            ).show(supportFragmentManager,"BottomSheetDialog")
+
+
         }
 
         binding.enterButton.setOnClickListener {

@@ -2,4 +2,6 @@
     <string name="app_name">MUDEA</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="xpUpText">Mais experiência por <b><i>MARRY</i></b> concluído</string>
+    <string name="marryUpText">Chance de não consumir seu <b><i>MARRY</i></b> do ciclo (2 horas)</string>
 </resources>

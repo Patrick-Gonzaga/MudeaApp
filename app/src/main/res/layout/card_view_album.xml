@@ -25,7 +25,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imagePersonagem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -53,7 +53,7 @@
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintBottom_toBottomOf="@+id/imagePersonagem"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -64,6 +64,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/nomePersonagem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Neymar Junior"
@@ -77,6 +78,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/nomeAnime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -99,6 +101,7 @@
                         app:tint="@color/white" />
 
                     <TextView
+                        android:id="@+id/generoPersonagem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Masc."
@@ -135,6 +138,7 @@
             android:src="@drawable/ic_kakera" />
 
         <TextView
+            android:id="@+id/valksPoint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="3dp"

@@ -27,7 +27,12 @@ class CardsContainerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //here
-        binding.radioRolls.isChecked = true
+        initListeners()
+    }
+
+    private fun initListeners() {
+        //binding.radioRolls.isChecked = true //INCLUIR
+
         parentFragmentManager.beginTransaction()
             .add(binding.navHostFragmentCards.id, AlbumFragment()).commit()
             .also { binding.radioAlbum.isChecked = true } //APAGAR
@@ -46,11 +51,8 @@ class CardsContainerFragment : Fragment() {
                         .commit()
 
                 }
+            }
         }
-
-
-        }
-
     }
 
     override fun onDestroyView() {

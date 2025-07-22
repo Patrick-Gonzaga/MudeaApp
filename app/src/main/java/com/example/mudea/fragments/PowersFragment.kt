@@ -10,7 +10,7 @@ import com.example.mudea.databinding.FragmentPowersBinding
 
 
 class PowersFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private var _binding: FragmentPowersBinding? = null
     private val binding get() = _binding!!
 

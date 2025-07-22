@@ -12,5 +12,9 @@
         android:id="@+id/navSettings"
         android:icon="@drawable/ic_settings_icon"
         />
+    <item
+        android:id="@+id/navPerfil"
+        android:icon="@drawable/ic_perfil"
+        />
 
 </menu>

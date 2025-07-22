@@ -11,17 +11,28 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+
     <style name="myButton" parent="Widget.MaterialComponents.Button">
 
         <item name="backgroundTint">@null</item>
         <item name="android:background">@drawable/button_style</item>
     </style>
+
     <style name="myButtonInverted" parent="Widget.MaterialComponents.Button">
 
-    <item name="backgroundTint">@null</item>
-    <item name="android:background">@drawable/button_style_inverted</item>
-</style>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/button_style_inverted</item>
+    </style>
+    <style name="myButtonPowerUp" parent="Widget.MaterialComponents.Button">
 
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/button_style_powerup</item>
+    </style>
+    <style name="containerLevelStyle" parent="Widget.MaterialComponents.Button">
+
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/container_style_level</item>
+    </style>
 
 
     <style name="Theme.MUDEA" parent="Base.Theme.MUDEA" />
