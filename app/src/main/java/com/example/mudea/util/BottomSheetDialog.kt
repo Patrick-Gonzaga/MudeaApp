@@ -14,8 +14,8 @@ class BottomSheetDialog(
     private val message: String,
     private val button: String? = "Entendi",
     private val onClick: () -> Unit = {}
-) : BottomSheetDialogFragment(){
-    private var _binding : BottomSheetDialogBinding? = null
+) : BottomSheetDialogFragment() {
+    private var _binding: BottomSheetDialogBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -23,7 +23,7 @@ class BottomSheetDialog(
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = BottomSheetDialogBinding.inflate(inflater,container,false)
+        _binding = BottomSheetDialogBinding.inflate(inflater, container, false)
         binding.bottomSheetTitle.text = title
         binding.bottomSheetMessage.text = message
         binding.bottomSheetButton.text = button

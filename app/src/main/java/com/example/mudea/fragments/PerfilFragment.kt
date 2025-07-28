@@ -9,7 +9,6 @@ import com.example.mudea.R
 import com.example.mudea.databinding.FragmentPerfilBinding
 
 class PerfilFragment : Fragment() {
-
     private var _binding: FragmentPerfilBinding? = null
     private val binding get() = _binding!!
 
@@ -18,20 +17,8 @@ class PerfilFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentPerfilBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentPerfilBinding.inflate(inflater, container, false)
         return binding.root
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        //here
-
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
 
 }

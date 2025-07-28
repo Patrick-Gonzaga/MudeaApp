@@ -9,12 +9,9 @@
         android:icon="@drawable/ic_power_icon"
         />
     <item
-        android:id="@+id/navSettings"
-        android:icon="@drawable/ic_settings_icon"
+        android:id="@+id/navUsers"
+        android:icon="@drawable/ic_users"
         />
-    <item
-        android:id="@+id/navPerfil"
-        android:icon="@drawable/ic_perfil"
-        />
+
 
 </menu>

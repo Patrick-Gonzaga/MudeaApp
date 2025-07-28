@@ -1,7 +1,6 @@
 package com.example.mudea.data
 
 
-
 data class Personagens(
     var imgSrc: String = "",
     val nome: String,

@@ -32,21 +32,11 @@ class RollsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //here
-        /*initShadowBlur()*/
 
     }
 
 
-    /*fun initShadowBlur(){
-        val viewToBlur = requireView().findViewById<View>(R.id.cardView)
-        viewToBlur.isDrawingCacheEnabled = true
-        val bitmap = Bitmap.createBitmap(viewToBlur.drawingCache)
-        viewToBlur.isDrawingCacheEnabled = false
-        Blurry.with(requireContext())
-            .radius(15)
-            .from(bitmap)
-            .into(requireView().findViewById(R.id.shadowBg))
-    }*/
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

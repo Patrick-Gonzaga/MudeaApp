@@ -5,10 +5,74 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="100dp"
+        android:clickable="true"
+        app:backgroundTint="@color/primaryColor"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/outline_menu_24" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fabGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="fabPerfil,fabLogout"
+        tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabPerfil"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Perfil"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:backgroundTint="@color/primaryColor"
+        app:icon="@drawable/ic_perfil"
+        app:iconGravity="end"
+        app:iconPadding="0dp"
+        app:iconSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/fabMain"
+        app:layout_constraintEnd_toEndOf="@+id/fabMain"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabLogout"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Logout"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:backgroundTint="@color/primaryColor"
+        app:icon="@drawable/ic_logout"
+        app:iconGravity="end"
+        app:iconPadding="0dp"
+        app:iconSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/fabPerfil"
+        app:layout_constraintEnd_toEndOf="@+id/fabMain"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -18,12 +82,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <FrameLayout
             android:id="@+id/navHostFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1"></FrameLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigation"
