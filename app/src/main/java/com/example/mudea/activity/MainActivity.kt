@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.forEach
 import androidx.core.view.isVisible
 import com.example.mudea.R
@@ -26,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         BottomSheetDialog(
             message = "Login concluído com email: ${FirebaseHelper.getUser()?.email}",
         ).show(supportFragmentManager, "BottomSheetDialog")
@@ -35,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     fun initFragment(){
         supportFragmentManager.beginTransaction()
-            .add(binding.navHostFragment.id, PowersFragment()).commit()
+            .add(binding.navHostFragment.id, PerfilFragment()).commit()
 
         with(binding){
             bottomNavigation.setOnItemSelectedListener { item ->
@@ -88,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                         // Desativa temporariamente a seleção automática
                         binding.bottomNavigation.menu.setGroupCheckable(0, false, false)
 
-                        // Desmarca todos os itens manualmente
+
                         for (i in 0 until binding.bottomNavigation.menu.size()) {
                             binding.bottomNavigation.menu.getItem(i).isChecked = false
                         }

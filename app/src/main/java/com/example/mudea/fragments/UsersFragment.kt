@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.mudea.databinding.FragmentSettingsBinding
+import com.example.mudea.databinding.FragmentUsersBinding
 
 class UsersFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var _binding: FragmentSettingsBinding? = null
+
+    private var _binding: FragmentUsersBinding? = null
     private val binding get() = _binding!!
 
 
@@ -18,7 +18,7 @@ class UsersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        _binding = FragmentUsersBinding.inflate(inflater, container, false)
         return binding.root
     }
 
